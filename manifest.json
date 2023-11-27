@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Tab-ula rasa",
+  "description": "A Tab Manager view code at https://github.com/flurynam/Tab-ula-rasa",
+  "author": "nf",
+  "version": "1.0",
+  "icons": {
+    "16": "icon/icon-16.png",
+    "32": "icon/icon-32.png",
+    "48": "icon/icon-48.png",
+    "128": "icon/icon-128.png"
+  },
+  "action": {
+    "default_popup": "tabmanager.html"
+  },
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "permissions": ["tabGroups", "tabs"]
+}

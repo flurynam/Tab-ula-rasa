@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/skeleton.css" />
+  </head>
+  <body>
+    <template id="li_template">
+      <tr>
+        <td>
+          <a>
+            <input type="checkbox" class="check" value="">
+          </a>
+        </td>
+        <td>
+          <b class="title">Tab Title</b>
+          <p class="url">Tab Url</p>
+        </td>
+        <td class="tabgroup"><p class="group">Tab Group</p></td>
+        <td><button class="goto" onclick="openTab(this.value.split()[0],this.value.split()[1])">Go To Tab</button></td>
+        
+      </tr>
+    </template>
+    <div class="container">
+      <h3>Tab Group Manager</h3>
+      <div class="row">
+        <div class="one-half column">
+          <label for="groupName">Your Tab Group Name</label>
+          <input class="u-full-width" type="text" id="groupName" value="test"></input>
+        </div>
+        <div class="one-half column">
+          <label for="filter">Search for: </label>
+          <input class="u-full-width" type="text" id="filter" value=""></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one-third column"><button id="group" class="button-primary">Group Tabs</button></div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th><a id="selection">Select</a></th>
+            <th><a id="sortName">Title</a> / <a id="sortUrl">URL</a></th>
+            <th><a id="sortGroup">TabGroup</a></th>
+            <th>GoTo</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="./js/manager.js" type="module"></script>
+  </body>
+</html>
